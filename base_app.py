@@ -86,7 +86,7 @@ segmentation_model = load_segmentation_model()
 if page == "Home":
     st.title("Welcome to the Segmentation Model 📊🛰️")
     st.markdown("""This application allows users to upload satellite images and receive segmentation predictions based on a trained model.""")
-    st.image("sample.png")
+    st.image("WhatsApp Image 2024-11-26 at 07.29.59_88c516a2.jpg")
 
     # Add Instructions Section
     st.subheader("How to Use the Application:")
