@@ -165,13 +165,27 @@ elif page == "Insights":
 
     # Create a DataFrame with labeled rows
     data = {
-        "Metric": ["Accuracy", "IoU"],
-        "Segmentation Model": [0.8, 0.75],
+        "Metric": ["Accuracy", "IoU", "Dice Loss"],
+        "Segmentation Model": [0.94, 0.78, 0.20],
     }
     df = pd.DataFrame(data).set_index("Metric")
 
-    # Render a bar chart using the DataFrame
+    # Sort the values in descending order to reorder the bars
+    df = df.sort_values(by="Segmentation Model", ascending=True)
+
+    # Render a bar chart using the sorted DataFrame
     st.bar_chart(df)
+
+    # Provide insights about the model performance
+    st.markdown("### Model Performance Insights")
+    st.write("""
+        - **Accuracy**: The model shows high accuracy at 94%, indicating that it performs well overall in terms of predicting the correct labels.
+        - **IoU (Intersection over Union)**: With a value of 0.78, the model has a strong performance in terms of spatial overlap between the predicted and actual segmented regions.
+        - **Dice Loss**: A Dice Loss of 0.20 suggests that the model’s predictions are close to the true values, as Dice Loss is a measure of similarity between two sets, with a lower value indicating better segmentation.
+    """)
+
+    # Additional insights could include a comparison with other models if applicable
+    # st.write("Further analysis can be done with comparative models for a deeper understanding.")
 
     
 # View Images and Masks Page
