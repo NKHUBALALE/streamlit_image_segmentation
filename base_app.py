@@ -281,7 +281,7 @@ elif page == "Meet the team":
         },
         {
             "name": "MUWANWA TSHIKOVHI - Data Science Intern",
-            "photo": "test_image1.jpg",
+            "photo": "muwanwa.png",
             "email": "tshikovhimuwanwa@gmail.com",
             "linkedin": "https://www.linkedin.com/in/muwanwa-tshikovhi-64a5b6196/"
         },
