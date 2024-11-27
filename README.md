@@ -2,6 +2,10 @@
 
 Welcome to the **Segmentation Model Web App**, a tool designed for satellite image analysis and segmentation. This application leverages deep learning to produce segmentation masks that can assist in various applications, such as optimizing telecommunications network design.
 
+
+![WhatsApp Image 2024-11-26 at 07 29 59_88c516a2](https://github.com/user-attachments/assets/49c01994-eda3-4a76-b9b1-68bde4f3d398)
+
+
 ---
 
 ## Features
