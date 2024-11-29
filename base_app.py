@@ -138,11 +138,14 @@ if page == "Predictions":
         # Simulate prediction for sample images (replace this with your actual model prediction if needed)
         predicted_mask = segmentation_model.predict(processed_image).squeeze()
 
+        # Resize predicted mask to match original image dimensions
+        predicted_mask_resized = cv2.resize(predicted_mask, (original_image.shape[1], original_image.shape[0]))
+
         col1, col2 = st.columns(2)
         with col1:
             st.image(cv2.cvtColor(original_image, cv2.COLOR_BGR2RGB), caption="Original Image")
         with col2:
-            st.image(predicted_mask, caption="Predicted Segmentation Mask", clamp=True, channels="GRAY")
+            st.image(predicted_mask_resized, caption="Predicted Segmentation Mask", clamp=True, channels="GRAY")
 
     # Allow users to upload their own images
     st.markdown("### Or Upload Your Own Image")
@@ -155,8 +158,9 @@ if page == "Predictions":
             with col1:
                 st.image(cv2.cvtColor(original_image, cv2.COLOR_BGR2RGB), caption="Original Image")
             with col2:
-                st.image(predicted_mask, caption="Predicted Segmentation Mask", clamp=True, channels="GRAY")
-
+                # Resize the predicted mask to match the uploaded image dimensions
+                predicted_mask_resized = cv2.resize(predicted_mask, (original_image.shape[1], original_image.shape[0]))
+                st.image(predicted_mask_resized, caption="Predicted Segmentation Mask", clamp=True, channels="GRAY")
 # Insights Page
 elif page == "Insights":
     st.markdown("### Key Insights")
