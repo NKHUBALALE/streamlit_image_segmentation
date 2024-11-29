@@ -125,7 +125,7 @@ if page == "Predictions":
     # Display sample images in columns
     for idx, (label, img_path) in enumerate(sample_images.items()):
         with cols[idx]:
-            st.image(img_path, caption=label, use_container_width=True)
+            st.image(img_path, caption=label)  # Removed use_container_width for compatibility
             if st.button(f"Select {label}"):
                 selected_image = img_path
 
@@ -140,9 +140,9 @@ if page == "Predictions":
 
         col1, col2 = st.columns(2)
         with col1:
-            st.image(cv2.cvtColor(original_image, cv2.COLOR_BGR2RGB), caption="Original Image", use_container_width=True)
+            st.image(cv2.cvtColor(original_image, cv2.COLOR_BGR2RGB), caption="Original Image")
         with col2:
-            st.image(predicted_mask, caption="Predicted Segmentation Mask", use_container_width=True, clamp=True, channels="GRAY")
+            st.image(predicted_mask, caption="Predicted Segmentation Mask", clamp=True, channels="GRAY")
 
     # Allow users to upload their own images
     st.markdown("### Or Upload Your Own Image")
@@ -153,10 +153,9 @@ if page == "Predictions":
         if original_image is not None:
             col1, col2 = st.columns(2)
             with col1:
-                st.image(cv2.cvtColor(original_image, cv2.COLOR_BGR2RGB), caption="Original Image", use_container_width=True)
+                st.image(cv2.cvtColor(original_image, cv2.COLOR_BGR2RGB), caption="Original Image")
             with col2:
-                st.image(predicted_mask, caption="Predicted Segmentation Mask", use_container_width=True, clamp=True, channels="GRAY")
-
+                st.image(predicted_mask, caption="Predicted Segmentation Mask", clamp=True, channels="GRAY")
 
 # Insights Page
 elif page == "Insights":
