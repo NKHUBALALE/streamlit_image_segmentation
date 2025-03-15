@@ -252,7 +252,7 @@ elif page == "Meet the team":
         {
             "name": "EMMANUEL NKHUBALALE - Data Science Intern | Team Lead",
             "photo": "Nkadimeng.jpg",
-            "email": "physimanuel@gmail.com",
+            "email": "nkhubalalenkadimeng@gmail.com",
             "linkedin": "https://www.linkedin.com/in/nkhubalale-emmanuel-nkadimeng/"
         },
         {
