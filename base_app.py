@@ -11,8 +11,10 @@ warnings.filterwarnings("ignore")
 
 
 # Setting the page configuration
-st.set_page_config(page_title="Segmentation Model", layout="wide")
-
+st.set_page_config(
+    page_title="AI Image Segmentation App | Sand Technologies & ExploreAI (ALX)",
+    layout="wide"
+)
 # Sidebar for navigation
 st.sidebar.title("Navigation Pane ⤵️")
 st.sidebar.markdown('<style>div.row {display: flex;}</style>', unsafe_allow_html=True)
