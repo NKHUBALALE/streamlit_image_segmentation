@@ -30,6 +30,18 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+#open graph tags
+st.markdown(
+    """
+    <meta property="og:title" content="AI Image Segmentation Demo | Sand Technologies / ExploreAI" />
+    <meta property="og:description" content="Upload satellite images, generate segmentation masks, and explore deep learning in action. Built during ALX internship at Sand Technologies." />
+    <meta property="og:image" content="https://yourdomain.com/preview.jpg" />
+    <meta property="og:type" content="website" />
+    """,
+    unsafe_allow_html=True
+)
+
+
 # Sidebar for navigation
 st.sidebar.title("Navigation Pane ⤵️")
 st.sidebar.markdown('<style>div.row {display: flex;}</style>', unsafe_allow_html=True)
@@ -101,7 +113,7 @@ segmentation_model = load_segmentation_model()
 
 # Home Page
 if page == "Home":
-    st.title("Welcome to the Segmentation Model 📊🛰️")
+    st.title("Welcome to the Segmentation Model ")
     st.markdown("""This application allows users to upload satellite images and receive segmentation predictions based on a trained model.""")
     st.image("WhatsApp Image 2024-11-26 at 07.29.59_88c516a2.jpg")
 
@@ -125,7 +137,7 @@ if page == "Home":
 
 # Predictions Page
 if page == "Predictions":
-    st.title("Generate Predictions 🚀")
+    st.title("Generate Predictions ")
     st.markdown("Upload a satellite image to generate its segmentation mask or explore the provided sample images.")
 
     # Display sample images
@@ -235,7 +247,7 @@ elif page == "Images and Masks":
             st.image(mask, caption=f'{selected_pair} - Mask')
 
 if page == "Feedback":
-    st.title("We Value Your Feedback 💬")
+    st.title("We Value Your Feedback ")
     st.markdown("Please share your thoughts about the application. Your feedback helps us improve!")
 
     # Text area for user feedback
@@ -244,7 +256,7 @@ if page == "Feedback":
     # Submit button
     if st.button("Submit Feedback"):
         if user_feedback.strip():  # Check if the feedback is not empty
-            st.success("Thank you for your feedback! 🙌")
+            st.success("Thank you for your feedback! ")
             # Optional: Save feedback to a file
             with open("user_feedback.txt", "a") as f:
                 f.write(f"{user_feedback}\n")
@@ -255,7 +267,7 @@ if page == "Feedback":
 # Meet the Team Page
 # Meet the Team Page
 elif page == "Meet the team":
-    st.markdown("### Meet The Team 👩🏾‍💻👩🏾‍💻")
+    st.markdown("### Meet The Team ")
 
     # Mission Statement
     st.markdown("""
