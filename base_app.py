@@ -15,6 +15,21 @@ st.set_page_config(
     page_title="AI Image Segmentation App | Sand Technologies & ExploreAI (ALX)",
     layout="wide"
 )
+
+# Description
+st.markdown(
+    """
+    <head>
+        <meta name="description" 
+              content="Interactive AI image segmentation app built with deep learning. Developed during Sand Technologies internship with ExploreAI (ALX). Upload satellite images and explore computer vision insights." />
+        <meta name="keywords" 
+              content="AI, Image Segmentation, Computer Vision, Sand Technologies, ExploreAI, ALX, Deep Learning, Satellite Images, Streamlit App" />
+        <meta name="author" content="Height Segmentation Team B" />
+    </head>
+    """,
+    unsafe_allow_html=True
+)
+
 # Sidebar for navigation
 st.sidebar.title("Navigation Pane ⤵️")
 st.sidebar.markdown('<style>div.row {display: flex;}</style>', unsafe_allow_html=True)
